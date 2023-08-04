@@ -35,7 +35,14 @@ public class MediatorContaCorrente {
             // percentual de bônus
             if (((ContaPoupanca) conta).getPercentualDeBonus() < 0) {
                 return "O percentual de bônus não pode ser menor do que zero";
+            }else{
+                boolean ret = daoContaCorrente.incluir(conta);
+            if (!ret) { // salva na variável "ret" o retorno "true ou false" da método incluir da Classe
+                        // DaoContaCorrente;
+                return "Conta ja existente";
             }
+            }
+            
         } else {
             boolean ret = daoContaCorrente.incluir(conta);
             if (!ret) { // salva na variável "ret" o retorno "true ou false" da método incluir da Classe

@@ -65,4 +65,10 @@ public class ContaCorrente implements Serializable {
         saldo = saldo - valor;
     }
 
+    @Override
+    public String toString (){
+        return "\nNúmero da conta: " + numero + "\nSaldo atual: " + saldo + "\nNome do correntista: " + nomeDoCorrentista;
+        //Sobrescreve a função toString e formata conforme acima ("toString" é uma classe herdade da classe object)
+    }
+
 }

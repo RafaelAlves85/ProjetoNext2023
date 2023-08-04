@@ -35,6 +35,10 @@ public class ContaPoupanca extends ContaCorrente  {
 
     }
     
-
+    @Override
+    public String toString(){
+        return super.toString() + "\nPercentual de Bônus: " + percentualDeBonus; 
+        //reusou o método toString da Classe ContaCorrente (super classe) e personalizou incluindo o percentual de bônus
+    }
     
 }
